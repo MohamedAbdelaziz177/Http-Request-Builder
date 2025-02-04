@@ -46,4 +46,14 @@ public class HttpRequestBuilder<T> {
         this.body = body;
         return this;
     }
+
+    public  HttpRequestBuilder<T> build()
+    {
+        if(url == null)
+            return null;
+
+        if(headers == null) return null;
+
+        return this;
+    }
 }
