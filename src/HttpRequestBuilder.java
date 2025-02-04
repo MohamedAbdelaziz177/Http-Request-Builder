@@ -19,23 +19,25 @@ public class HttpRequestBuilder<T> {
 
     public HttpRequestBuilder<T> SetMehod(String method)
     {
-        method = method.toUpperCase();
+        this.method = method.toUpperCase();
         return this;
     }
 
     public HttpRequestBuilder<T> SetUrl(String url)
     {
-
+        this.url = url;
         return this;
     }
 
     public HttpRequestBuilder<T> AddQueryString(String key, String value)
     {
+        queryParams.put(key, value);
         return this;
     }
 
-    public  HttpRequestBuilder<T> SetBody(T value)
+    public  HttpRequestBuilder<T> SetBody(T body)
     {
+        this.body = body;
         return this;
     }
 }
