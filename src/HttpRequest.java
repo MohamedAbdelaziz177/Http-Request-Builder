@@ -22,7 +22,7 @@ public class HttpRequest<T> {
     public String toString() {
 
         String Req =  "HttpRequest {" +
-                "method='" + method.toString() + '\'' +
+                "method='" + method.toString().toUpperCase() + '\'' +
                 ", url='" + url + '\'' +
                 ", headers=" + headers +
                 ", queryParams=" + queryParams +

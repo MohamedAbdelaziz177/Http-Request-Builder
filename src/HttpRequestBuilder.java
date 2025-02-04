@@ -6,7 +6,7 @@ import java.util.Map;
 public class HttpRequestBuilder<T> {
 
     private String url;
-    private String method;
+    private HttpMethod method;
     private Map<String, String> headers = new HashMap<String, String>();
     private  Map<String, String> queryParams = new HashMap<String, String>();
     private T body = null;
@@ -17,9 +17,9 @@ public class HttpRequestBuilder<T> {
         return this;
     }
 
-    public HttpRequestBuilder<T> SetMehod(String method)
+    public HttpRequestBuilder<T> SetMehod(HttpMethod method)
     {
-        this.method = method.toUpperCase();
+        this.method = method;
         return this;
     }
 
