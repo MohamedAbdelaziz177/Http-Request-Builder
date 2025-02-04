@@ -25,8 +25,8 @@ public class HttpRequest<T> {
                 "method='" + method.toString().toUpperCase() + '\'' +
                 ", url='" + url + '\'' +
                 ", headers=" + headers +
-                ", queryParams=" + queryParams +
-                ", body=" + body +
+                ", queryParams=" + (queryParams != null ? queryParams : "-------") +
+                ", body=" + ((body != null)? body.toString() : "-----") +
                 '}';
 
         return Req;
