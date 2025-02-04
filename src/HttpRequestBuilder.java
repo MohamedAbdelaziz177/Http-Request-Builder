@@ -1,4 +1,3 @@
-import com.sun.net.httpserver.Headers;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,7 +46,7 @@ public class HttpRequestBuilder<T> {
         return this;
     }
 
-    public  HttpRequest<T> build()
+   public HttpRequest<T> build()
     {
         if(url == null)
             return null;
@@ -55,6 +54,6 @@ public class HttpRequestBuilder<T> {
         if(headers == null)
             return null;
 
-        return new HttpRequest<T>(url, method, body, headers, queryParams);
+        return new HttpRequest<>(url, method, body, headers, queryParams);
     }
 }
