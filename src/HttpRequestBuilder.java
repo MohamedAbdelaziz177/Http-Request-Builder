@@ -17,9 +17,15 @@ public class HttpRequestBuilder<T> {
         return this;
     }
 
-    public HttpRequestBuilder<T> SetMehod(HttpMethod method)
+    public HttpRequestBuilder<T> SetMethod(HttpMethod method)
     {
         this.method = method;
+        return this;
+    }
+
+    public HttpRequestBuilder<T> SetMethod(String method)
+    {
+        this.method = HttpMethod.valueOf(method.toUpperCase());
         return this;
     }
 
