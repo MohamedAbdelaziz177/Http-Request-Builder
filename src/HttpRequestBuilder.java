@@ -52,7 +52,8 @@ public class HttpRequestBuilder<T> {
         if(url == null)
             return null;
 
-        if(headers == null) return null;
+        if(headers == null)
+            return null;
 
         return this;
     }
