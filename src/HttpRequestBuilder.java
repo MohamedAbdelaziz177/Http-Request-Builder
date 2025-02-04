@@ -54,6 +54,6 @@ public class HttpRequestBuilder<T> {
         if(headers == null)
             return null;
 
-        return new HttpRequest<>(url, method, body, headers, queryParams);
+        return new HttpRequest<T>(url, method, body, headers, queryParams);
     }
 }
