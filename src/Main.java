@@ -2,6 +2,8 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
+import netscape.javascript.JSObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,6 +36,9 @@ public class Main {
                 .AddQueryString("ID", "2")
                 .SetBody("{\"key\":\"value\"}")
                 .build();
+
+
+
 
         System.out.println(Req.toString());
         System.out.println(Reqq.toString());
